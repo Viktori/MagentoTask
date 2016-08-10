@@ -42,6 +42,10 @@ select {
 	&:focus {
 		padding: 0 29px 0 9px;
 	}
+	&::-ms-expand {
+	    display: none;
+	}
+
 }
 .select-wrapper {
 	position: relative;
