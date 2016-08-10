@@ -1,0 +1,40 @@
+@media screen and (max-width: 1200px) {
+	.content {
+		.checkout-review {
+			.data-table {
+				th {
+					font-size: 12px;
+					&.ticket-name {
+						width: 16%;
+					}
+					&.empty {
+						width: 0%;
+					}
+					&.actions {
+						width: 10%;
+					}
+				}
+				td {
+					&.price {
+						.currency {
+							left: 64%;
+						}
+					}
+					&.actions {
+						.arrow {
+							display: none;
+						}
+					}
+				}
+			}
+			.buttons-wrapper {
+				width: 76%;
+			}
+		}
+		.form-block .field-tip {
+			width: 50%;
+			right: -60%;
+		}
+	}
+
+}

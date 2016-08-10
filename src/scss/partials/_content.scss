@@ -1,0 +1,265 @@
+$main-padding: 4.5%;
+
+.content {
+	padding: 0 0 110px;
+	margin-left: $left-block-width;
+
+	.navigation {
+		padding: 0 $main-padding;
+		position: relative;
+		font-size: 0;
+		&:after {
+			content: '';
+			display: block;
+			width: 100%;
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			border-bottom: 2px solid $mid-gray-color;
+			z-index: 1;
+		}
+		.navigation-item {
+			position: relative;
+			padding: 20px;
+			display: inline-block;
+			font-size: 12px;
+			color: $light-gray-color;
+			border-bottom: 2px solid $mid-gray-color;
+			z-index: 2;
+			&.active {
+				color: $base-text-color;
+				border-color: $base-text-color;
+			}
+			&.current {
+				color: $green-color;
+				border-color: $green-color;
+			}
+		}
+	}
+}
+
+// Checkout content styles
+.checkout-container {
+	font-family: $serif;
+
+	.text-block {
+		padding: 30px $main-padding;
+		background: white;
+		p {
+			max-width: 800px;
+			line-height: 1.5;
+		}
+	}
+
+	.header-block {
+		padding: 5px $main-padding;
+		border-top: 2px solid $mid-gray-color;
+		border-bottom: 2px solid $mid-gray-color;
+		h3 {
+			&:before {
+				content: '';
+				display: inline-block;
+				width: 45px;
+				height: 45px;
+				padding-right: 15px;
+				vertical-align: middle;
+				background: transparent url('../image/ico/icon.png') no-repeat;
+			}
+		}
+	}
+
+	.form-block {
+		padding: 50px 0 30px $main-padding;
+		.fields-wrapper {
+			position: relative;
+			display: inline-block;
+			margin-right: 10px;
+			width: 63%;
+			vertical-align: top;
+			.field-wrapper {
+				margin-bottom: 20px;
+				label {
+					display: inline-block;
+					width: 39%;
+					max-width: 250px;
+				}
+				input {
+					&[name="event-capacity"] {
+						width: 85px;
+					}
+					&[name="price"] {
+						width: 55%;
+						max-width: 420px;
+					}
+				}
+			}
+		}
+		.field-tip {
+			$arrow-size: 15px;
+			display: none;
+			position: absolute;
+			top: -25px;
+			right: -48%;
+			padding: 15px;
+			width: 40%;
+			max-width: 335px;
+			text-align: left;
+			font-size: 12px;
+			border: 2px solid $mid-gray-color;
+			color: $base-text-color;
+			&:before, &:after {
+				content: '';
+				position: absolute;
+			}
+			&:before {
+				@include arrow-left(12px, $mid-gray-color);
+				left: -14px;
+				top: 27px;
+			}
+			&:after {
+				@include arrow-left(11px, $base-bg-color);
+				left: -11px;
+				top: 28px;
+			}
+		}
+	}
+
+
+	.checkout-review {
+		.data-table {
+			width: 100%;
+			table-layout: fixed;
+			tr {
+				&:nth-child(even) {
+					background: $mid-10-gray-color;
+				}
+			}
+			th, td {
+				padding: 15px 0.5% 15px 0;
+				text-align: left;
+				font-size: 13px;
+				&.ticket-name {
+					width: 17%;
+					padding-left: $main-padding;
+					input {
+						width: 100%;
+					}
+				}
+			}
+			th {
+				text-transform: uppercase;
+				color: white;
+				background: $dark-gray-color;
+				width: 11%;
+				&.duration {
+					width: 120px;
+				}
+				&.vat {
+					width: 65px;
+				}
+				&.status {
+					width: 11%;
+				}
+				&.empty {
+					width: 8%;
+				}
+				&.primary-price {
+					width: 50px;
+				}
+				span {
+					display: block;
+					height: 35px;
+					max-width: 90px;
+				}
+				&:first-child span {
+					max-width: 120px;
+				}
+			}
+			td {
+				select, .select-wrapper {
+					display: inline-block;
+					box-sizing: border-box;
+				}
+				input {
+					width: 100%;
+					min-width: 65px;
+					box-sizing: border-box;
+				}
+				&.duration input {
+					width: 50px;
+					min-width: 50px;
+				}
+				&.status, &.vat {
+					select, .select-wrapper {
+						width: 100%;
+					}
+				}
+				&.price {
+					position: relative;
+					padding-right: 15px;
+					.currency {
+						position: absolute;
+						left: 70%;
+						top: 26px;
+					}
+				}
+				&.actions {
+					white-space: nowrap;
+					.arrow, .action {
+						height: 36px;
+						display: inline-block;
+						background: url(../image/ico/sprite.png) no-repeat;
+						cursor: pointer;
+						&:hover {
+							opacity: 0.9;
+						}
+					}
+					.arrow {
+						width: 15px;
+						&.arrow-down {
+							background-position: -15px 0;
+						}
+					}
+					.action {
+						width: 36px;
+						&.options {
+							background-position: -35px 0;
+						}
+						&.remove {
+							background-position: -75px 0;
+						}
+					}
+				}
+			}
+		}
+
+		.buttons-container {
+			padding: 12px 0 12px;
+			background: white;
+			.add-price-range-button, .save-button {
+				@include button($turquoise-color);
+			}
+			.abort-button {
+				float: right;
+				@include button($light-gray-color);
+			}
+			.add-price-range-button {
+				float: left;
+			}
+			.save-button {
+				float: right;
+				margin-left: 5px;
+			}
+		}
+		.buttons-wrapper {
+			overflow: hidden;
+			width: 68%;
+			padding-left: $main-padding;
+			.continue-button {
+				float: right;
+				margin-top: 30px;
+				@include button($green-color);
+			}
+		}
+	}
+}

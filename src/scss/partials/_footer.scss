@@ -1,0 +1,19 @@
+/* Footer
+-----------------------------------------------------------------------------*/
+.footer {
+	position: relative;
+	min-width: 320px;
+	height: 60px;
+	margin: -61px 0 0 $left-block-width;
+	border-top: 1px solid $mid-gray-color;
+	background: white;
+}
+
+.footer-links {
+	margin: 0 0 0 10px;
+	line-height: 60px;
+	font-size: 12px;
+	a {
+		padding-left: 4%;
+	}
+}

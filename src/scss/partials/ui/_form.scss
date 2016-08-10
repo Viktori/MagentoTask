@@ -1,0 +1,95 @@
+$icon-info-size: 14px;
+
+button {
+	display: inline-block;
+	padding: 11px 20px;
+	font: 600 12px/1 $sansSerif;
+	color: #fff;
+	border-radius: 3px;
+}
+
+input[type="text"], select {
+	height: 30px;
+	padding: 1px 10px;
+	font-size: 12px;
+	border-radius: 5px;
+	border: none;
+	box-shadow: 0 2px 2px $light-gray-color inset;
+	&[readonly] {
+		color: $light-gray-color;
+	}
+	&:focus {
+		outline: none;
+		border: 1px solid gray;
+		padding: 0 9px;
+	}
+}
+
+input[type="checkbox"] {
+	width: 20px;
+	height: 20px;
+	&:focus {
+		outline: none;
+	}
+	&:checked {
+		background-color: black;
+	}
+}
+
+select {
+	appearance: none;
+	padding-right: 30px;
+	&:focus {
+		padding: 0 29px 0 9px;
+	}
+}
+.select-wrapper {
+	position: relative;
+	&:after {
+		content: "›";
+		display: block;
+		position: absolute;
+		right: 10px;
+		top: 8px;
+		transform: rotate(90deg);
+	}
+}
+
+label, .data-cell, th {
+	&.required {
+		span:first-child {
+			&:after {
+				content: "*";
+				position: relative;
+				top: -2px;
+				font-size: 10px;
+				color: $blue-color;
+			}
+		}
+	}
+}
+
+label {
+	.info {
+		content: '?';
+		display: inline-block;
+		width: $icon-info-size;
+		height: $icon-info-size;
+		margin-left: 10px;
+		//position: relative;
+		//top: -1px;
+		line-height: $icon-info-size;
+		font-size: 10px;
+		font-weight: bold;
+		text-align: center;
+		color: $blue-color;
+		border-radius: 50%;
+		border: 1px solid $blue-color;
+		cursor: pointer;
+		&:focus, &:hover {
+			.field-tip {
+				display: inline-block;
+			}
+		}
+	}
+}

@@ -1,0 +1,52 @@
+*,
+*:before,
+*:after {
+	box-sizing: content-box;
+}
+html {
+	height: 100%;
+}
+body {
+	font: 300 14px/18px $sansSerif;
+	height: 100%;
+	color: $base-text-color;
+}
+
+h2 {
+	font-size: 20px;
+}
+
+h3 {
+	font-size: 18px;
+}
+
+a {
+	color: $link-color;
+	&:hover {
+		color: $dark-gray-color;
+	}
+}
+.wrapper {
+	overflow: hidden;
+	width: 100%;
+	min-width: 1024px;
+	height: auto !important;
+	height: 100%;
+	min-height: 100%;
+	margin-bottom: -60px;
+		background: linear-gradient(to right, $dark-gray-color $left-block-width, $base-bg-color $left-block-width, $base-bg-color 100%) no-repeat;
+}
+
+.container {
+	overflow: hidden;
+	margin: 0 auto;
+}
+.strong {
+	font-weight: 600;
+}
+.navigation {
+	text-transform: uppercase;
+	&:hover {
+		cursor: pointer;
+	}
+}

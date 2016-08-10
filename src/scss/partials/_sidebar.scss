@@ -1,0 +1,31 @@
+/* Sidebar */
+.left-sidebar {
+	width: $left-block-width;
+	float: left;
+
+	.buttons-container {
+		overflow: hidden;
+		padding: 12px;
+		background-color: $dark-10-gray-color;
+		.zum-button {
+			float: left;
+			@include button($light-gray-color);
+		}
+		.save-button {
+			float: right;
+			@include button($green-color);
+		}
+	}
+
+	.navigation {
+		margin-top: 45px;
+		li {
+			padding: 15px 30px 15px;
+			color: $light-text-color;
+			transition: all 0.5s ease;
+			&.current, &:hover {
+				background-color: $dark-10-gray-color;
+			}
+		}
+	}
+}
