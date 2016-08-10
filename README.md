@@ -30,5 +30,5 @@ gulp build
 
 Also you could download project and open **build/index.html** in your browser. 
 
-Or just open this link http://htmlpreview.github.io/?https://github.com/Viktori/MagentoTask/blob/master/build/index.html.
+Or just open this link https://htmlpreview.github.io/?https://github.com/Viktori/MagentoTask/blob/master/build/index.html.
 
