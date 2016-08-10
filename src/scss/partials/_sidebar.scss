@@ -7,11 +7,17 @@
 		overflow: hidden;
 		padding: 12px;
 		background-color: $dark-10-gray-color;
+		button {
+			padding-right: 0;
+			padding-left: 0;
+		}
 		.zum-button {
+			width: 135px;
 			float: left;
 			@include button($light-gray-color);
 		}
 		.save-button {
+			width: 105px;
 			float: right;
 			@include button($green-color);
 		}
